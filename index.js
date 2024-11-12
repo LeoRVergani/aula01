@@ -1,8 +1,14 @@
-const http = require('http');
+// index.js
+// const {soma} = require("./calculadora.js")
 
-http.createServer((req, res) => {
-    res.writeHead(200, {'content-type': 'text/plain'})
-    res.end("Hello World")
-}).listen(3050)
+// let resultadoSoma = soma(10, 5)
 
-console.log("server rodando na porta 'http://localhost:3050'")
+// console.log("O resultado da soma é " + resultadoSoma)
+
+const {verificarVelocidade} = require("./verificadorVelocidade.js")
+const prompt = require("prompt-sync")()
+
+let velocidadeAtual = prompt("Digite a velocidade atual: ")
+let velocidadeMaxima = prompt("Digite a velocidade máxima: ")
+
+verificarVelocidade(velocidadeAtual, velocidadeMaxima)
